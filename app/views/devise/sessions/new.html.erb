@@ -1,21 +1,21 @@
 <div class="login-container">
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="login-header">
-<a href="#" class="back-link"><i class="fas fa-arrow-left"></i></a>
-<h2>LOGIN</h2>
-<div class="actions">
-<%= f.submit "Log in" %>
-</div>
+<div class="login-header">
+  <a href="#" class="back-link"><i class="fas fa-arrow-left"></i></a>
+  <h2>LOGIN</h2>
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div>
 </div>
   <div class="input-field">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+    <%= f.email_field :email, class: "login-email", autofocus: true, autocomplete: "email", placeholder: "Email" %>
   </div>
 
   <span class="login-span"></span>
 
   <div class="input-field">
-    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+    <%= f.password_field :password, class: "login-password", autocomplete: "current-password", placeholder: "Password" %>
   </div>
 
   <% if devise_mapping.rememberable? %>

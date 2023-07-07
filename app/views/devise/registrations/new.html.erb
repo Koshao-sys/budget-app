@@ -1,29 +1,47 @@
-<h2>Sign up</h2>
+<div class="register-container">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="register-header">
+      <a href="#" class="back-link"><i class="fas fa-arrow-left"></i></a>
+      <h2>REGISTER</h2>
+      <div class="actions">
+        <%= f.submit "Next" %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <div class="upload-pp">
+    <div><i class="fas fa-user-circle"></i></div>
+    <p>Upload picture</p>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+    <span class="register-span"></span>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+    <div class="fullname-field">
+    <%= f.text_field :name, class: "register-name", autofocus: true, autocomplete: "name", placeholder: "Full name" %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+    <span class="register-span"></span>
 
-<%= render "devise/shared/links" %>
+    <div class="email-field">
+      <%= f.email_field :email, class: "register-email", autofocus: true, autocomplete: "email", placeholder: "Email" %>
+    </div>
+
+    <span class="register-span"></span>
+
+    <div class="password-field">
+      <%= f.password_field :password, class: "register-pass", autocomplete: "new-password", placeholder: "Password" %>
+    </div>
+
+    <span class="register-span"></span>
+
+    <div class="confirm-field">
+      <%= f.password_field :password_confirmation, class: "confirm-pass", autocomplete: "new-password", placeholder: "Confirm password" %>
+    </div>
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</div>
+

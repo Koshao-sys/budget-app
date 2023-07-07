@@ -23,9 +23,9 @@ form .input-field {
   width: 100%;
 }
 
-#user_email {
+.login-email {
   width: 100%;
-  border: #434b54 2px solid;
+  border: #434b54 1px solid;
   border-left: none;
   border-right: none;
   border-bottom: none;
@@ -40,9 +40,9 @@ form .input-field {
   margin-left: 10px;
 }
 
-#user_password {
+.login-password {
   width: 100%;
-  border: #434b54 2px solid;
+  border: #434b54 1px solid;
   border-left: none;
   border-right: none;
   border-top: none;
