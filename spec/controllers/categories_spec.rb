@@ -12,12 +12,12 @@ RSpec.describe Category, type: :system do
     subject.save
   end
   describe 'Categories' do
-    it "Shows category name" do
+    it 'Shows category name' do
       visit category_group_index_path(group.id)
       page.has_content?(subject.name)
     end
 
-    it "Shows Category amount" do
+    it 'Shows Category amount' do
       visit category_group_index_path(group.id)
       page.has_content?(subject.amount)
     end

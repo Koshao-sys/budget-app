@@ -14,17 +14,17 @@ RSpec.describe Group, type: :system do
   end
 
   describe 'index page' do
-    it "Shows the Transaction name" do
+    it 'Shows the Transaction name' do
       visit root_path
       expect(page).to have_content(subject.name)
     end
 
-    it "Shows the Transaction Icon" do
+    it 'Shows the Transaction Icon' do
       visit root_path
       expect(page).to have_content('Add New Category')
     end
 
-    it "Shows page for that Transaction clicked on" do
+    it 'Shows page for that Transaction clicked on' do
       visit root_path
       click_on subject.name
       visit category_group_index_path(subject.id)
