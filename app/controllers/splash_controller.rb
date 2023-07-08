@@ -1,3 +1,7 @@
 class SplashController < ApplicationController
-  def index; end
+  def index
+    return unless current_user.present?
+
+    @categories = current_user.groups.all
+  end
 end
