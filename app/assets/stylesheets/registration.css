@@ -1,0 +1,83 @@
+.register-container {
+  background-color: #f0f0f0;
+  height: 100vh;
+}
+
+.register-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #fff;
+  background-color: #3778c2;
+  margin-bottom: 20px;
+}
+
+.register-header i {
+  color: #fff;
+}
+
+.login-header i {
+  color: #fff;
+}
+
+.actions input {
+  background-color: inherit;
+  border: none;
+  color: #fff;
+}
+
+.upload-pp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 10px;
+  background-color: #fff;
+  border-top: #434b54 1px solid;
+  width: 100%;
+}
+
+.field {
+  border: none;
+}
+
+.upload-pp i {
+  color: #434b54;
+}
+
+.upload-pp p {
+  color: #434b54;
+}
+
+.fullname-field,
+.email-field,
+.password-field {
+  width: 100%;
+  border: none;
+}
+
+.register-name,
+.register-email,
+.register-pass {
+  border: none;
+  width: 100%;
+  padding: 10px;
+}
+
+.register-span {
+  width: 100%;
+  height: 1px;
+  background-color: #434b54;
+  display: block;
+  margin-left: 10px;
+}
+
+.confirm-pass {
+  border: #434b54 1px solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 10px;
+  width: 100%;
+}

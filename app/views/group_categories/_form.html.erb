@@ -1,0 +1,27 @@
+<%= form_with(model: group_category) do |form| %>
+  <% if group_category.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(group_category.errors.count, "error") %> prohibited this group_category from being saved:</h2>
+
+      <ul>
+        <% group_category.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :group_id, style: "display: block" %>
+    <%= form.text_field :group_id %>
+  </div>
+
+  <div>
+    <%= form.label :category_id, style: "display: block" %>
+    <%= form.text_field :category_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
