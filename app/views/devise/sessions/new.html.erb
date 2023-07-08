@@ -2,7 +2,9 @@
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <div class="login-header">
-  <a href="#" class="back-link"><i class="fas fa-arrow-left"></i></a>
+  <%= link_to root_path, class: "back-link" do %>
+    <i class="fas fa-arrow-left"></i>
+  <% end %>
   <h2>LOGIN</h2>
   <div class="actions">
     <%= f.submit "Log in" %>
